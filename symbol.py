@@ -1,4 +1,4 @@
-from propLog.sentence import Sentence
+from sentence import Sentence
 
 class Symbol(Sentence):
 
@@ -25,3 +25,4 @@ class Symbol(Sentence):
 
     def symbols(self):
         return {self.name}
+    

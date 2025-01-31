@@ -1,5 +1,5 @@
-from propLog.sentence import Sentence
-from propLog.sentence import Symbol
+from sentence import Sentence
+from symbol import Symbol
 
 class NOT(Sentence):
 
@@ -138,5 +138,3 @@ class IFF(Sentence):
     
     def symbols(self):
         return set.union(self.left.symbols(), self.right.symbols())
-
-    
