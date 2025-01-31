@@ -35,4 +35,5 @@ class Sentence():
             
         if not len(s) or s.isalpha() or balanced(s[1:-1]):
             return s if s[0] == "(" and s[-1] == ")" else f"({s})"
-        
+        return f"({s})"
+    

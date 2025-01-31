@@ -3,15 +3,10 @@ from symbol import Symbol
 from operators import *
 
 class Model():
-
-    def __init__(self, knowledge, query):
-        self.knowledge = knowledge
-        self.query = query
+    """A model for propositional logic."""
     
-        # Get all symbols in both knowledge and query
-        self.symbols = set.union(knowledge.symbols(), query.symbols())
-    
-    def model_check(self, knowledge, query):
+    @classmethod
+    def model_check(cls, knowledge, query):
         """Checks if knowledge base entails query."""
 
         def check_model(knowledge, query, symbols, model):
@@ -40,6 +35,9 @@ class Model():
             # Ensure entailment holds in both models
             return (check_model(knowledge, query, symbols_, model_true) and
                     check_model(knowledge, query, symbols_, model_false))
+        
+        # Get all symbols in both knowledge and query
+        symbols = set.union(knowledge.symbols(), query.symbols())
 
         # Check that knowledge entails query
-        return check_model(knowledge, query, self.symbols, {})
+        return check_model(knowledge, query, symbols, {})

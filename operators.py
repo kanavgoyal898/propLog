@@ -39,7 +39,7 @@ class AND(Sentence):
         return hash(("and", tuple(hash(conjunct) for conjunct in self.conjuncts)))
     
     def __repr__(self):
-        conjunctions = ", ".join(str(conjunct) for conjunct in self.conjuncts)
+        conjunctions = ", ".join([str(conjunct) for conjunct in self.conjuncts])
         return f"AND({conjunctions})"
     
     def add(self, conjunct):
@@ -52,7 +52,7 @@ class AND(Sentence):
     def formula(self):
         if len(self.conjuncts) == 1:
             return self.conjuncts[0].formula()
-        return " ∧ ".join([Sentence.parenthesize(conjunct.formula()) for conjunct in self.conjuncts])
+        return f" ∧ ".join([Sentence.parenthesize(conjunct.formula()) for conjunct in self.conjuncts])
     
     def symbols(self):
         return set.union(*[conjunct.symbols() for conjunct in self.conjuncts])
@@ -68,10 +68,10 @@ class OR(Sentence):
         return isinstance(other, OR) and self.disjuncts == other.disjuncts
     
     def __hash__(self):
-        return hash("or", tuple(hash(disjunct) for disjunct in self.disjuncts))
+        return hash(("or", tuple(hash(disjunct) for disjunct in self.disjuncts)))
     
     def __repr__(self):
-        disjuncts = ", ".join(str(disjunct) for disjunct in self.disjuncts)
+        disjuncts = ", ".join([str(disjunct) for disjunct in self.disjuncts])
         return f"OR({disjuncts})"
     
     def evaluate(self, model):
@@ -80,7 +80,7 @@ class OR(Sentence):
     def formula(self):
         if len(self.disjuncts) == 1:
             return self.disjuncts[0].formula()
-        return " ∨ ".join([Sentence.parenthesize(disjunct.formula()) for disjunct in self.disjuncts])
+        return f" ∨ ".join([Sentence.parenthesize(disjunct.formula()) for disjunct in self.disjuncts])
     
     def symbols(self):
         return set.union(*[disjunct.symbols() for disjunct in self.disjuncts])
