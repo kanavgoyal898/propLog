@@ -33,7 +33,7 @@ class Sentence():
                     count -= 1
             return count == 0
             
-        if not len(s) or s.isalpha() or balanced(s[1:-1])
+        if not len(s) or s.isalpha() or balanced(s[1:-1]):
             return s if s[0] == "(" and s[-1] == ")" else f"({s})"
         
     
