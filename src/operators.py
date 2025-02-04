@@ -1,5 +1,5 @@
-from sentence import Sentence
-from symbol import Symbol
+from .sentence import Sentence
+from .symbol import Symbol
 
 class NOT(Sentence):
     """

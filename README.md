@@ -92,10 +92,10 @@ The `Symbol` class represents a propositional symbol (variable), which is evalua
 ## Usage Example
 
 ```python
-from model import Model
-from sentence import Sentence
-from symbol import Symbol
-from operators import *
+from src.model import *
+from src.sentence import Sentence
+from src.symbol import Symbol
+from src.operators import *
 
 # Create symbols
 p = Symbol("p")
@@ -111,7 +111,8 @@ knowledge = AND(p, NOT(q))
 query = implication
 
 # Check if knowledge entails the query
-result = Model.model_check(knowledge, query)
+print("Inference by Model Checking:")
+result = ModelCheckInference.model_check(knowledge, query)
 print(f"Does knowledge entail query? {result}")
 ```
 

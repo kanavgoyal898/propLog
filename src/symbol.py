@@ -1,4 +1,4 @@
-from sentence import Sentence
+from .sentence import Sentence
 
 class Symbol(Sentence):
 

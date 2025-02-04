@@ -1,8 +1,9 @@
-from sentence import Sentence
-from symbol import Symbol
-from operators import *
+import itertools
+from .sentence import Sentence
+from .symbol import Symbol
+from .operators import *
 
-class Model():
+class ModelCheckInference:
     """A model for propositional logic."""
     
     @classmethod
