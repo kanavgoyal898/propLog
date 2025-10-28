@@ -1,9 +1,9 @@
 # propLog: Propositional Logic Evaluation Library
 
-`propLog` is a Python-based implementation of propositional logic, designed to handle logical operations, model checking, and entailment. Inspired by lessons from the CS50x AI course, this project provides classes and methods to represent and evaluate logical sentences and formulas. It implements common logical operations such as NOT, AND, OR, IMPLIES, IFF, and XOR. The project supports the evaluation of logical expressions based on a model and checks if a knowledge base entails a query.
+propLog is a Python-based implementation of propositional logic, designed to handle logical operations, model checking, and entailment. Inspired by lessons from the CS50x AI course, this project provides classes and methods to represent and evaluate logical sentences and formulas. It implements common logical operations such as NOT, AND, OR, IMPLIES, IFF, and XOR. The project supports the evaluation of logical expressions based on a model and checks if a knowledge base entails a query.
 
 <div style="text-align: center;">
-  <img src="./demo.jpg" alt="propLog" style="width: 100%;">
+  <img src="./image.png" alt="propLog" style="width: 100%;">
 </div>
 
 ## Features
